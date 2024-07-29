@@ -1,0 +1,39 @@
+[
+{
+    "title": "4️⃣ - Puissance 4 en Langage C",
+    "description": "Le but de ce projet était de reproduire un Puissance 4 en langage C. Le projet se déroule en plusieurs étapes soigneusement planifiées pour assurer son succès. Nous concevons une maquette du Puissance 4 pour visualiser le projet. Un cahier de tests détaillé est élaboré pour assurer la qualité de l'application. Les règles du jeu sont traduites en algorithmes, décomposés en sous-tâches pour une implémentation efficace. Le code source est écrit en langage C, en suivant les bonnes pratiques. Après exécution du programme et détection des erreurs, nous les corrigeons pour un fonctionnement optimal.",
+    "skills": ["Individuel", "Langage C"],
+    "link": "https://github.com/AntonMAIGNAN/SAE101/tree/main"
+},
+{
+    "title": "💡 - Robot de puissance 4",
+    "description":"Cette fonction évalue la situation du jeu en prenant en compte la position des jetons, les alignements possibles et les coups de l'adversaire. Elle génère des mouvements tactiques en temps réel pour offrir une expérience de jeu améliorée.",
+    "skills": ["Individuel","Langage C"],
+    "link": "https://github.com/AntonMAIGNAN/SAE102/tree/main"
+},
+{
+    "title": "📑 - Générateur de PDF à partir de fichiers sources format .txt",
+    "description":"L'objectif était de créer un \"API\" pouvant transformer un fichier .txt d'une région en un .pdf arrangé. Dans le cadre de ce projet, nous suivons différentes étapes pour atteindre nos objectifs. Tout d'abord, nous identifions les outils nécessaires. Ensuite, nous préparons les fichiers de test, comprenant les données et les configurations. Nous proposons ensuite un workflow enchaînant les outils de manière cohérente. Enfin, nous procédons à la production finale et au \"scriptage\" du workflow, automatisant les étapes pour plus d'efficacité.",
+    "skills": ["Travail d'équipe", "Bash", "PHP", "Docker"],
+    "link": "https://github.com/AntonMAIGNAN/SAE103/tree/main"
+},
+{
+    "title": "⚙️ - Script SQL de création de BDD",
+    "description":"À partir d'un recueil de données sur un Festival nommé les \"Transmusical\", nous avons dû créer la base de données correspondante. Dans le cadre de ce projet, nous avons créer la base de données en concevant un diagramme de classe et en l'implémentant en SQL.",
+    "skills": ["Travail en duo", "SQL (Pgsql)"],
+    "link": "https://github.com/AntonMAIGNAN/SAE104/tree/main"
+},
+{
+    "title": "📊 - Étude de la RSE d'une entreprise",
+    "description": "Le but de ce projet était de nous faire découvrir des entreprises ainsi que de nouveaux termes et une méthodologie pour analyser et faire un diagnostic de l'entreprise à partir de leur rapport RSE. Pour mener à bien ce projet, nous avons organisé notre travail en équipe, fixé des objectifs et partagé les tâches. Une recherche documentaire approfondie sur une entreprise spécifique a été effectuée à l'aide d'outils de veille. Nous avons analysé les informations sur la responsabilité sociétale des entreprises dans le développement durable et rédigé une synthèse écrite. Une présentation visuelle attrayante a été créée avec des outils web, et nous avons ensuite présenté en équipe notre travail, mettant en avant nos résultats et conclusions.",
+    "skills": ["Travail en Equipe", "Rechercher et analyser"],
+    "link": "https://github.com/AntonMAIGNAN/SAE106/tree/main"
+},
+{
+    "title": "🐯 - Pokemon : pokédex web",
+    "description":"À partir de fichiers JSON de statistiques/informations sur des Pokémons, nous avons du concevoir une page web les recensant. Il s'agit d'un pokédex sous la forme d'un tableau HTML, plusieurs types d'évènements JS sont disponibles sur cette table, par exemple, \"onOver\" et  \"onClick\". A vous de tester ! Et à ne pas oublier \"qui dit tableau dit...\" ? Alors vous avez trouvé ? Oui c'est les \"Filtres\", bravo ! ",
+    "skills": ["Travail en duo", "JavaScript", "HTML/CSS"],
+    "link": "https://github.com/AntonMAIGNAN/R4.A.10_Pokemon"
+}
+]
+  

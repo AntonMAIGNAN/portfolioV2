@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import NavBar from './components/Navbar';
+import Header from './components/Header';
+import Projects from './components/Projects';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-gray-900 text-white">
+      <NavBar />
+      <Header />
+      <Projects />
+      <Footer />
+      <div className="text-center text-gray-400 py-4">
+        ©2024 MAIGNAN Anton. Tous droits réservés. | <a href="https://iut-lannion.univ-rennes.fr" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-600">IUT Lannion</a>
+      </div>
     </div>
   );
 }
