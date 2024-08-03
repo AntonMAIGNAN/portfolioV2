@@ -2,6 +2,7 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import emailjs from '@emailjs/browser';
 import { KEYS_EMAIL_JS } from '../../constant/emailJS';
+import { Button } from '@headlessui/react';
 
 interface ContactPopupProps {
   onClose: () => void;
@@ -35,7 +36,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose }) => {
     };
   };
 
-  const [securityQuestion, setSecurityQuestion] = useState<{ question: string; answer: string }>(generateSecurityQuestion());
+  const [securityQuestion] = useState<{ question: string; answer: string }>(generateSecurityQuestion());
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -61,77 +62,78 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ onClose }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 z-50">
-      <div className="relative bg-white p-6 rounded shadow-lg w-11/12 max-w-lg">
+      <div className="relative bg-gray-900 p-6 rounded shadow-lg w-11/12 max-w-lg text-white">
         <button
           onClick={onClose}
-          className="absolute top-2 right-3 text-gray-500 hover:text-gray-700 p-1"
+          className="absolute top-2 right-3 text-gray-500 hover:text-gray-300 p-1"
         >
           &times;
         </button>
         {emailSent ? (
           <p className="text-green-500">Merci ! Votre message a bien été envoyé.</p>
         ) : (
-          <form onSubmit={handleSubmit} className='text-gray-800'>
+          <form onSubmit={handleSubmit} className="text-white">
             <h2 className="text-2xl mb-4">Me contacter !</h2>
             <div className="mb-4">
-              <label className="block text-gray-700">Nom</label>
+              <label className="block text-gray-300">Nom</label>
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border border-gray-600 rounded bg-gray-800 text-white focus:border-orange-500 focus:ring-orange-500"
                 required
               />
             </div>
             <div className="mb-4">
-              <label className="block text-gray-700">Email</label>
+              <label className="block text-gray-300">Email</label>
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border border-gray-600 rounded bg-gray-800 text-white focus:border-orange-500 focus:ring-orange-500"
                 required
               />
             </div>
             <div className="mb-4">
-              <label className="block text-gray-700">Message</label>
+              <label className="block text-gray-300">Message</label>
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border border-gray-600 rounded bg-gray-800 text-white focus:border-orange-500 focus:ring-orange-500"
                 required
               />
             </div>
             {/* Champ Honeypot caché */}
             <div className="hidden">
-              <label className="block text-gray-700">Ne remplissez pas ce champ</label>
+              <label className="block text-gray-300">Ne remplissez pas ce champ</label>
               <input
                 type="text"
                 name="honeypot"
                 value={formData.honeypot}
                 onChange={handleChange}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-2 border border-gray-600 rounded bg-gray-800"
               />
             </div>
             {/* Question de sécurité */}
-            <div className="mb-4">
-              <label className="block text-gray-700">{securityQuestion.question}</label>
+            <div className="mb-4 p-3 border border-orange-400 bg-gray-800 rounded">
+              <h3 className="text-lg mb-2">🚨 Question de sécurité 🚨</h3>
+              <label className="block text-gray-300">{securityQuestion.question}</label>
               <input
                 type="text"
                 name="securityAnswer"
                 value={formData.securityAnswer}
                 onChange={handleChange}
-                className="w-full p-2 border border-gray-300 rounded"
+                className="w-full p-1 border border-gray-600 rounded bg-gray-800 text-white focus:border-orange-500 focus:ring-orange-500"
                 required
               />
             </div>
             <div className="flex justify-end">
-              <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
+              <Button type="submit" className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
                 Envoyer le message
-              </button>
+              </Button>
             </div>
           </form>
         )}
