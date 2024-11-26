@@ -22,7 +22,7 @@ const ProjectTabs: React.FC<ProjectTabsProps> = ({ projects }) => {
   const selectedProject = projects[selectedProjectIndex];
 
   return (
-    <div className="flex flex-col lg:flex-row max-w-screen-lg mx-auto p-4 space-y-4 lg:space-y-0 border-2 border-gray-700 rounded-lg">
+    <div className="flex flex-col lg:flex-row max-w-screen-xl mx-auto p-4 space-y-4 lg:space-y-0 border-2 border-gray-700 rounded-lg">
       {/* Menu Latéral Scrollable */}
       <div className="lg:w-1/4 bg-gray-800 text-white p-4 border-r border-gray-700 overflow-y-auto max-h-[calc(100vh-30rem)] rounded-lg">
         <h3 className="text-xl font-semibold mb-4">Mes Projets</h3>

@@ -19,6 +19,7 @@ function Header() {
         </p>
         <Button href="CV/CV.pdf" target="_blank" rel="noopener noreferrer">Voir mon CV</Button>
       </div>
+      
       <div className="relative">
         <img src={pdp} alt="Portrait" className="w-80 h-80 object-cover border-2 border-orange-500 rounded-full mx-auto" />
       </div>
